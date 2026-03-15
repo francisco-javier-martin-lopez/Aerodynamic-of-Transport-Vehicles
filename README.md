@@ -1,7 +1,10 @@
-# Aerodynamic-of-Transport-Vehicles
+# [cite_start]Aerodynamics of Transport Vehicles - Politecnico di Milano [cite: 1, 5]
 
-Project done for the course with this name in Politecnico di Milano. 
+[cite_start]This repository contains the CFD analysis project for the "Aerodynamics of Transport Vehicles" course at Politecnico di Milano[cite: 1, 5]. [cite_start]The study investigates the aerodynamic impact of different rear wing attachment configurations on a Tesla Model S[cite: 6, 17]. 
 
-The project consist in the analysis of the aerodynamic coefficients and flow field of different rear wing configurations in a Tesla Model S CAD model.
+[cite_start]**Team:** Co-developed by Alberto Rivero, Alejandro Rivera, Mikel Segovia, and Francisco Javier Martín[cite: 7].
 
-The group was formed by Alberto Rivero García, Alejandro Rivera Míguez, Mikel Segovia Díaz and Francisco Javier Martín López.
+### Project Overview & Methodology
+* [cite_start]**3D Modeling & CAD:** Modified a Tesla Model S geometry using CATIA® to integrate a custom rear wing combining NACA 4412 and Selig 1223 airfoils with endplates[cite: 16, 39, 40, 42].
+* [cite_start]**Mesh Generation:** Generated high-quality hybrid meshes using OpenFOAM's `blockMesh` and `snappyHexMesh` utilities[cite: 84, 85]. [cite_start]Conducted a rigorous mesh independence study and evaluated boundary layer resolution ($y^+$ assessment) to balance numerical accuracy and computational cost[cite: 88, 89, 90, 180]. * [cite_start]**CFD Simulation Setup:** Performed incompressible RANS simulations using the OpenFOAM® `SimpleFoam` solver[cite: 92, 93]. [cite_start]The $k-\omega$ SST turbulence model was selected to accurately capture boundary layer physics and far-field robustness[cite: 95]. * [cite_start]**Configurations Analyzed:** Evaluated a baseline model against three distinct spoiler mounting strategies: "Below" (suction surface), "Back" (pressure surface, behind trailing edge), and "Front" (pressure surface, ahead of leading edge)[cite: 28, 29, 30, 31, 32, 33].
+* [cite_start]**Post-processing & Visualization:** Utilized ParaView for advanced flow field visualization[cite: 16]. [cite_start]Analyzed mean pressure coefficients ($C_p$) on the wing and car body, evaluated wake formations, and identified complex 3D vortex structures using the Q-criterion[cite: 228, 271, 362]. * [cite_start]**Aerodynamic Performance:** Compared downforce ($C_L$), drag ($C_D$), and aerodynamic efficiency across all setups[cite: 196, 203]. [cite_start]The findings successfully correlated aerodynamic forces with theoretical vehicle dynamics, such as cornering velocity limits.
